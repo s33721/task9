@@ -41,16 +41,34 @@ public class Movie implements MediaItem, Rentable, Rateable {
 
     @Override
     public boolean checkAvailability() {
-        return false;
+        return availabilityStatus;
     }
 
     @Override
     public boolean rentItem() {
-        return false;
+        if (availabilityStatus) {
+            availabilityStatus = false;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean isItemRented() {
+        if (availabilityStatus) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
     public boolean returnItem() {
-        return false;
+        if (isItemRented()) {
+            availabilityStatus = true;
+            return true;
+        } else {
+            return false;
+        }
     }
 }
