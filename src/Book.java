@@ -25,7 +25,7 @@ public class Book implements MediaItem, Rentable {
 
     @Override
     public String getFormatedString() {
-        return "";
+        return "Title: " + title + " " + "Author: " + author + " " + "Publication year: " + publicationYear + " " + "ISBN: " + ISBN + " " + "Availability status: " + availabilityStatus;
     }
 
     @Override
