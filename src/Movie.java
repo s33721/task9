@@ -7,6 +7,13 @@ public class Movie implements MediaItem, Rentable, Rateable {
     private int duration;
     private boolean availabilityStatus;
     private ArrayList<Integer> ratings;
+    public Movie(String title, String director, int releaseYear, int duration) {
+        this.title = title;
+        this.director = director;
+        this.releaseYear = releaseYear;
+        this.duration = duration;
+        ratings = new ArrayList<>();
+    }
 
     @Override
     public String getTitle() {
@@ -26,7 +33,6 @@ public class Movie implements MediaItem, Rentable, Rateable {
     @Override
     public void addRating(int rating) {
         ratings.add(rating);
-
     }
 
     @Override

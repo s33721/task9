@@ -5,12 +5,11 @@ public class Book implements MediaItem, Rentable {
     private String ISBN;
     private boolean availabilityStatus;
 
-    public Book(String title, String author, int publicationYear, String ISBN, boolean availabilityStatus) {
+    public Book(String title, String author, int publicationYear, String ISBN) {
         this.title = title;
         this.author = author;
         this.publicationYear = publicationYear;
         this.ISBN = ISBN;
-        this.availabilityStatus = availabilityStatus;
     }
 
     @Override
