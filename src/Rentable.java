@@ -3,7 +3,7 @@ public interface Rentable {
     static double calculateLateFee(int daysLate){
         return daysLate * 0.5;
     }
-    void checkAvailability();
+    boolean  checkAvailability();
     boolean rentItem();
     boolean returnItem();
 }
